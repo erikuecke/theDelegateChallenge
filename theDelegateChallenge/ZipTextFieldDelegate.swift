@@ -15,7 +15,7 @@ class ZipTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-//        let allNumbers = Int(textField.text!)
+
         
         
         var newText = textField.text! as NSString
