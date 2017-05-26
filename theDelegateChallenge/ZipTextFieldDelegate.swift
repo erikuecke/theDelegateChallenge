@@ -13,4 +13,25 @@ class ZipTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+//        let allNumbers = Int(textField.text!)
+        
+        
+        var newText = textField.text! as NSString
+        newText = newText.replacingCharacters(in: range, with: string) as NSString
+        
+        return newText.length <= 5
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+   
+    
+
+    
 }
